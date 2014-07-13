@@ -4,7 +4,7 @@ data <- read.table("household_power_consumption.txt", header = TRUE, sep=";",na.
 data[,1] <- as.Date(data[,1],"%d/%m/%Y")
 data <- data[data[,"Date"]== "2007-02-01" | data[,"Date"]== "2007-02-02",]
 
-## plot the hist graph for global active power
+## plot the graph for global active power
 
 png("plot2.png")
 x <- strptime(paste(data$Date, data$Time), "%Y-%m-%d %H:%M:%S")
